@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "almanacinc_record_mp3",
             dependencies: [],
-            path: "Classes",
+            path: "../Classes",
             resources: [
                 .process("../Resources/PrivacyInfo.xcprivacy")
             ],
