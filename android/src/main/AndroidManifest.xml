@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+         RECORD_AUDIO is a runtime dangerous permission (Protection level: dangerous).
+         The plugin requests it at runtime via RecordMp3Plugin; the manifest entry
+         is still required so the system knows the app may use the microphone.
+    -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+</manifest>

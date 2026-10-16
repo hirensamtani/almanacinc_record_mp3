@@ -1,0 +1,68 @@
+// Top-level build file for the almanacinc_record_mp3 Android plugin.
+// Pure Java — no Kotlin Gradle Plugin applied.
+group 'com.almanacinc.record_mp3'
+version '1.0.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // AGP ≥ 8.5.1 is required for correct 16 KB page-size packaging.
+        classpath 'com.android.tools.build:gradle:8.5.1'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.almanacinc.record_mp3'
+    compileSdk 36
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        minSdk 21
+
+        // NDK r28 stable — supports flexible page sizes and 16 KB alignment.
+        ndkVersion "28.0.13004108"
+
+        externalNativeBuild {
+            cmake {
+                // Pass flexible-page-size support flag to the NDK toolchain.
+                arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+            version "3.22.1"
+        }
+    }
+
+    // Prevent the AGP from stripping the 16 KB–aligned LOAD segments.
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging false
+        }
+    }
+}
+
+dependencies {
+    // Flutter embedding is provided by the Flutter toolchain at build time.
+    compileOnly 'io.flutter:flutter_embedding_debug:1.0.0-4ef2c4f86d7be77f66e4d0de21aa2c3f8b5c7f9c'
+}

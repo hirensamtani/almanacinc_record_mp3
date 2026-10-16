@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  PrivacyInfo.xcprivacy
+  ─────────────────────
+  Privacy manifest for almanacinc_record_mp3.
+
+  This plugin:
+    • Does NOT track users (NSPrivacyTracking = false).
+    • Does NOT contact any tracking domains (NSPrivacyTrackingDomains = []).
+    • Does NOT collect any data types on behalf of the app
+      (NSPrivacyCollectedDataTypes = []).
+    • Does NOT use any "required-reason" APIs
+      (NSPrivacyAccessedAPITypes = []).
+
+  Note: the plugin requests microphone permission at runtime via
+  AVAudioSession.requestRecordPermission.  This is a system permission
+  dialog managed by the OS — it is NOT a "required-reason" API and does
+  not need to appear in this manifest.  The host app's Info.plist must
+  include NSMicrophoneUsageDescription.
+-->
+<plist version="1.0">
+<dict>
+    <!-- Not tracking users across apps/websites owned by other parties -->
+    <key>NSPrivacyTracking</key>
+    <false/>
+
+    <!-- No tracking domains contacted -->
+    <key>NSPrivacyTrackingDomains</key>
+    <array/>
+
+    <!-- No data types collected by this SDK -->
+    <key>NSPrivacyCollectedDataTypes</key>
+    <array/>
+
+    <!-- No required-reason APIs used by this SDK -->
+    <key>NSPrivacyAccessedAPITypes</key>
+    <array/>
+</dict>
+</plist>

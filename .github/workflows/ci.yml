@@ -1,0 +1,77 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# CI workflow for almanacinc_record_mp3
+#
+# Triggers : push / PR to main
+# Jobs     : Analyze & Test (ubuntu-latest + macos-latest)
+#
+# Each job:
+#   1. Checks out the repository.
+#   2. Sets up Flutter stable with caching enabled.
+#   3. Installs plugin dependencies (flutter pub get).
+#   4. Runs `flutter analyze` on the plugin — must exit 0 (zero issues).
+#   5. Runs `flutter test` — must exit 0 (all tests pass).
+#   6. Installs example app dependencies.
+#   7. Runs `flutter analyze` on the example app.
+# ──────────────────────────────────────────────────────────────────────────────
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Cancel in-progress runs for the same branch on new pushes.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze_and_test:
+    name: Analyze & Test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Flutter setup ─────────────────────────────────────────────────
+      - name: Set up Flutter (stable)
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      # ── 3. Plugin dependencies ───────────────────────────────────────────
+      - name: Install plugin dependencies
+        run: flutter pub get
+
+      # ── 4. Analyze plugin ────────────────────────────────────────────────
+      # flutter analyze returns exit code 1 if there are any errors or warnings.
+      # Lint hints (INFO level) do not cause a non-zero exit.
+      - name: flutter analyze (plugin)
+        run: flutter analyze
+
+      # ── 5. Run unit tests ────────────────────────────────────────────────
+      - name: flutter test (plugin)
+        run: flutter test --reporter expanded
+
+      # ── 6. Example app dependencies ──────────────────────────────────────
+      - name: Install example dependencies
+        working-directory: example
+        run: flutter pub get
+
+      # ── 7. Analyze example app ───────────────────────────────────────────
+      - name: flutter analyze (example)
+        working-directory: example
+        run: flutter analyze

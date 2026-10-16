@@ -1,0 +1,2 @@
+// settings.gradle for the almanacinc_record_mp3 Android plugin module.
+rootProject.name = 'almanacinc_record_mp3'
