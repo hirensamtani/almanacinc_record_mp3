@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Almanac Inc.
+Copyright (c) 2026 Almanac Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-THIRD-PARTY NOTICES
-===================
-
-This package includes LAME 3.100, copyright (c) 1999–2011 The LAME Project.
-LAME is licensed under the GNU Lesser General Public License, version 2 or
-later (LGPL v2+). A complete copy of the LGPL license text is available in
-the file `third_party/lame/COPYING` distributed with this package.
-
-LAME upstream: https://lame.sourceforge.io/

@@ -1,16 +1,22 @@
 name: almanacinc_record_mp3
-description: >-
-  A Flutter plugin for real-time MP3 recording on Android and iOS using the
-  vendored LAME 3.100 encoder. Raw 16-bit PCM captured from the microphone is
-  encoded directly to MP3 frames with zero post-conversion passes.
-version: 1.0.0
-homepage: https://github.com/almanacinc/almanacinc_record_mp3
-repository: https://github.com/almanacinc/almanacinc_record_mp3
-issue_tracker: https://github.com/almanacinc/almanacinc_record_mp3/issues
+description: A Flutter plugin for real-time MP3 recording using vendored LAME 3.100 with 16 KB page-size support on Android and iOS.
+version: 1.0.1
+homepage: https://www.almanacindia.in
+repository: https://github.com/hirensamtani/almanacinc_record_mp3
+issue_tracker: https://github.com/hirensamtani/almanacinc_record_mp3/issues
 
 environment:
-  sdk: ">=3.3.0 <4.0.0"
-  flutter: ">=3.19.0"
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
 
 flutter:
   plugin:
@@ -20,13 +26,3 @@ flutter:
         pluginClass: RecordMp3Plugin
       ios:
         pluginClass: SwiftAlmanacRecordMp3Plugin
-
-dependencies:
-  flutter:
-    sdk: flutter
-  plugin_platform_interface: ^2.1.8
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^5.0.0
