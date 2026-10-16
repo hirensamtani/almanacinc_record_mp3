@@ -16,9 +16,10 @@
 #       ios/Classes/lame/                 (lame.h placed in include/ subdir)
 #  4. EXCLUDES frontend/, mpglib/, vector/ (SSE — breaks ARM builds), and
 #     all Makefiles.
-#  5. Applies two idempotent compatibility patches via sed:
+#  5. Applies three idempotent compatibility patches via sed:
 #       util.h    — replaces ieee754_float32_t with float in fast_log2 decl
 #       set_get.h — replaces #include <lame.h> with #include "lame.h"
+#       fft.c     — comments out #include "vector/lame_intrin.h"
 #  6. NEVER overwrites the hand-written config.h files in either destination.
 #  7. Copies LAME's COPYING license to third_party/lame/COPYING.
 #
@@ -190,6 +191,20 @@ apply_patches() {
         log "  Patched set_get.h: #include <lame.h> → #include \"lame.h\""
     else
         log "  set_get.h not found in ${DIR} — skipping Patch B"
+    fi
+
+    # ── Patch C: fft.c ────────────────────────────────────────────────────────
+    # Problem : fft.c includes "vector/lame_intrin.h", which is omitted from the
+    #           vendored tree because SSE/vector sources break ARM mobile targets.
+    # Fix     : Comment out the include statement.
+    if [ -f "${DIR}/fft.c" ]; then
+        sed -i.bak \
+            's/#include "vector\/lame_intrin\.h"/\/\* #include "vector\/lame_intrin\.h" \*\//g' \
+            "${DIR}/fft.c"
+        rm -f "${DIR}/fft.c.bak"
+        log "  Patched fft.c   : commented out #include \"vector/lame_intrin.h\""
+    else
+        log "  fft.c not found in ${DIR} — skipping Patch C"
     fi
 }
 
