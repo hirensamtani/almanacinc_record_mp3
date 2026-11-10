@@ -63,6 +63,5 @@ android {
 }
 
 dependencies {
-    // Flutter embedding is provided by the Flutter toolchain at build time.
-    compileOnly 'io.flutter:flutter_embedding_debug:1.0.0-4ef2c4f86d7be77f66e4d0de21aa2c3f8b5c7f9c'
+    // Flutter embedding is automatically provided by the Flutter Gradle plugin at build time.
 }

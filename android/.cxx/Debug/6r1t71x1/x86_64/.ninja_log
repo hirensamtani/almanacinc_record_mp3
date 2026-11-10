@@ -1,0 +1,24 @@
+# ninja log v5
+1	31	1792170601891502343	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/mpglib_interface.c.o	672a9efaa473523e
+4	53	1792170601911506456	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/tables.c.o	da9f82ad92610d09
+0	54	1792170601912871211	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/native-lib.cpp.o	f25b326b105d7587
+1	55	1792170601909398990	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/fft.c.o	c4dde410c778bec9
+0	57	1792170601917023142	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/VbrTag.c.o	841978b7649ff15
+1	59	1792170601916387807	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/gain_analysis.c.o	6aa7bbbac268a3fa
+0	59	1792170601917836104	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/bitstream.c.o	32e2d86fb72e6f3
+0	59	1792170601914646592	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/encoder.c.o	7227e48147829db2
+1	60	1792170601919897819	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/newmdct.c.o	5ee47bb62a43bd7d
+3	60	1792170601919807235	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/quantize_pvt.c.o	5c493a46c3491117
+2	62	1792170601922255953	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/presets.c.o	b21e9bbf4b95b7ff
+3	64	1792170601924183918	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/reservoir.c.o	8ac63a76af69279e
+3	67	1792170601927481346	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/quantize.c.o	78e97eacb39c7ed2
+4	68	1792170601927246512	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/set_get.c.o	e593ca2f27643526
+2	70	1792170601930509524	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/psymodel.c.o	cc0afafe09eee350
+1	71	1792170601931302485	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/id3tag.c.o	5a5f2f3e666becc8
+5	78	1792170601938059759	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/takehiro.c.o	e6453a7d8f0a6ea4
+1	79	1792170601939044721	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/lame.c.o	6ce45fb44b947955
+31	80	1792170601941190937	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/util.c.o	a1c1e064079278fd
+54	84	1792170601945058701	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/version.c.o	59c23d781611ab5e
+53	97	1792170601957770038	CMakeFiles/almanac_record_mp3.dir/src/main/cpp/lame/vbrquantize.c.o	d58d12842e99e5bd
+97	134	1792170601993365498	/Users/hirensamtani/AndroidStudioProjects/almanacInc/flashprompter/build/almanacinc_record_mp3/intermediates/cxx/Debug/6r1t71x1/obj/x86_64/libalmanac_record_mp3.so	b6208764c5f51a1a
+1	58	1792171035777010407	/Users/hirensamtani/AndroidStudioProjects/almanacInc/flashprompter/build/almanacinc_record_mp3/intermediates/cxx/Debug/6r1t71x1/obj/x86_64/libalmanac_record_mp3.so	b6208764c5f51a1a

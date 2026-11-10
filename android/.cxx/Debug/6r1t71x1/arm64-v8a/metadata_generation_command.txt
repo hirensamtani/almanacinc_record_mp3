@@ -1,0 +1,19 @@
+                        -H/Users/hirensamtani/AndroidStudioProjects/almanacInc/almanacinc_record_mp3/android
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_PLATFORM=android-21
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=/Users/hirensamtani/Library/Android/sdk/ndk/28.0.13004108
+-DCMAKE_ANDROID_NDK=/Users/hirensamtani/Library/Android/sdk/ndk/28.0.13004108
+-DCMAKE_TOOLCHAIN_FILE=/Users/hirensamtani/Library/Android/sdk/ndk/28.0.13004108/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/Users/hirensamtani/Library/Android/sdk/cmake/3.22.1/bin/ninja
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/hirensamtani/AndroidStudioProjects/almanacInc/flashprompter/build/almanacinc_record_mp3/intermediates/cxx/Debug/6r1t71x1/obj/arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/Users/hirensamtani/AndroidStudioProjects/almanacInc/flashprompter/build/almanacinc_record_mp3/intermediates/cxx/Debug/6r1t71x1/obj/arm64-v8a
+-DCMAKE_BUILD_TYPE=Debug
+-B/Users/hirensamtani/AndroidStudioProjects/almanacInc/almanacinc_record_mp3/android/.cxx/Debug/6r1t71x1/arm64-v8a
+-GNinja
+-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON
+                        Build command args: []
+                        Version: 2

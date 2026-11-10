@@ -1,0 +1,1 @@
+/Users/hirensamtani/AndroidStudioProjects/almanacInc/almanacinc_record_mp3/android/CMakeLists.txt
