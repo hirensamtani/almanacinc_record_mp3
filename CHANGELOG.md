@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.6
+
+- Added Swift Package Manager (SPM) support for iOS.
+- Restructured native iOS source layout under `Sources/` and modularized LAME headers.
+- Maintained dual-build compatibility with CocoaPods.
+
 ## 1.0.5
 * Fix release build failure by removing the hardcoded `flutter_embedding_debug` dependency from `android/build.gradle`.
 
