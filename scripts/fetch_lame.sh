@@ -13,7 +13,7 @@
 #       libmp3lame/*.c  libmp3lame/*.h  include/lame.h
 #     into:
 #       android/src/main/cpp/lame/        (lame.h placed here directly)
-#       ios/Classes/lame/                 (lame.h placed in include/ subdir)
+#       ios/almanacinc_record_mp3/Sources/almanac_lame/lame/   (lame.h in include/ subdir)
 #  4. EXCLUDES frontend/, mpglib/, vector/ (SSE — breaks ARM builds), and
 #     all Makefiles.
 #  5. Applies three idempotent compatibility patches via sed:
@@ -49,7 +49,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 readonly ANDROID_LAME="${REPO_ROOT}/android/src/main/cpp/lame"
-readonly IOS_LAME="${REPO_ROOT}/ios/Classes/lame"
+readonly IOS_LAME="${REPO_ROOT}/ios/almanacinc_record_mp3/Sources/almanac_lame/lame"
 readonly IOS_INCLUDE="${IOS_LAME}/include"
 readonly THIRD_PARTY="${REPO_ROOT}/third_party/lame"
 
@@ -232,6 +232,6 @@ log "  License : ${THIRD_PARTY}/COPYING"
 log ""
 log "Next step — commit the vendored sources:"
 log "  git add android/src/main/cpp/lame \\"
-log "          ios/Classes/lame \\"
+log "          ios/almanacinc_record_mp3/Sources/almanac_lame/lame \\"
 log "          third_party/lame"
 log "  git commit -m 'chore: vendor LAME ${LAME_VERSION}'"

@@ -1,13 +1,15 @@
 name: almanacinc_record_mp3
 description: A Flutter plugin for real-time MP3 recording using vendored LAME 3.100 with 16 KB page-size support on Android and iOS.
-version: 1.0.5
+version: 1.0.6
 homepage: https://www.almanacindia.in
 repository: https://github.com/hirensamtani/almanacinc_record_mp3
 issue_tracker: https://github.com/hirensamtani/almanacinc_record_mp3/issues
 
 environment:
   sdk: ^3.5.0
-  flutter: ">=3.24.0"
+  # Swift Package Manager support for the iOS plugin depends on the
+  # FlutterFramework package, which the Flutter tool only generates on 3.41+.
+  flutter: ">=3.41.0"
 
 dependencies:
   flutter:

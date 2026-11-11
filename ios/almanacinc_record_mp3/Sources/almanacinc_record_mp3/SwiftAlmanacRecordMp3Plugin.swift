@@ -4,6 +4,13 @@
 import AVFoundation
 import Flutter
 
+// Under Swift Package Manager the AlmanacLame C wrapper is a separate target and
+// must be imported explicitly. Under CocoaPods it lives in the same module (made
+// visible via the umbrella header), so no import is needed there.
+#if SWIFT_PACKAGE
+import almanac_lame
+#endif
+
 // MARK: - SwiftAlmanacRecordMp3Plugin
 
 /// iOS Swift implementation of the `almanacinc_record_mp3` Flutter plugin.

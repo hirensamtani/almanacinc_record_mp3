@@ -10,18 +10,19 @@
  *
  * Build-time requirements
  * ───────────────────────
- * • Compiled with -DHAVE_CONFIG_H (set via podspec GCC_PREPROCESSOR_DEFINITIONS).
- * • HEADER_SEARCH_PATHS must include:
- *     $(PODS_TARGET_SRCROOT)/Classes/lame/include   (for lame.h)
- *     $(PODS_TARGET_SRCROOT)/Classes/lame            (for config.h)
+ * • Compiled with -DHAVE_CONFIG_H (SPM: cSettings .define; Pod: GCC_PREPROCESSOR_DEFINITIONS).
+ * • The header search path must include, relative to this file's directory:
+ *     lame/include   (for lame.h)
+ *     lame           (for config.h)
+ *   SPM sets these via the almanac_lame target's cSettings .headerSearchPath;
+ *   CocoaPods sets them via the podspec HEADER_SEARCH_PATHS.
  */
 
 #include "AlmanacLame.h"
 
 /*
- * lame.h is found via HEADER_SEARCH_PATHS →
- *   $(PODS_TARGET_SRCROOT)/Classes/lame/include/lame.h
- * which is placed there by fetch_lame.sh.
+ * lame.h is found via the header search path →  lame/include/lame.h
+ * (placed there by fetch_lame.sh).
  */
 #include "lame.h"
 
